@@ -1,0 +1,22 @@
+{
+  "name": "@digilicense/ai",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/ --no-error-on-unmatched-pattern",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.120.0",
+    "@digilicense/validation": "workspace:*",
+    "openai": "^7.5.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "typescript": "^5.9.3"
+  }
+}

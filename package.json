@@ -1,0 +1,20 @@
+{
+  "name": "digi-license",
+  "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "db:migrate": "pnpm --filter @digilicense/db prisma migrate dev",
+    "db:studio": "pnpm --filter @digilicense/db prisma studio",
+    "db:generate": "pnpm --filter @digilicense/db prisma generate"
+  },
+  "devDependencies": {
+    "turbo": "^2.10.11"
+  }
+}

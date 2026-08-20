@@ -1,0 +1,28 @@
+{
+  "name": "@digilicense/api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src/ --no-error-on-unmatched-pattern",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@digilicense/ai": "workspace:*",
+    "@digilicense/db": "workspace:*",
+    "@digilicense/validation": "workspace:*",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "eslint": "^9.39.5",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3"
+  }
+}

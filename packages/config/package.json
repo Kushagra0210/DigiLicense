@@ -1,0 +1,14 @@
+{
+  "name": "@digilicense/config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./typescript/base.json",
+  "types": "./typescript/base.json",
+  "scripts": {
+    "lint": "eslint . --no-error-on-unmatched-pattern"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "typescript": "^5.9.3"
+  }
+}
