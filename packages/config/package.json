@@ -4,6 +4,9 @@
   "private": true,
   "main": "./typescript/base.json",
   "types": "./typescript/base.json",
+  "exports": {
+    "./typescript/base.json": "./typescript/base.json"
+  },
   "scripts": {
     "lint": "eslint . --no-error-on-unmatched-pattern"
   },
