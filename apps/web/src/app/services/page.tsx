@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { services } from "@/lib/services"
@@ -7,6 +7,18 @@ import { services } from "@/lib/services"
 export default function ServicesPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
+      <Button
+        asChild
+        variant="ghost"
+        size="sm"
+        className="-ml-2 mb-4 text-muted-foreground"
+      >
+        <Link href="/">
+          <ArrowLeft className="size-3.5" />
+          Back to home
+        </Link>
+      </Button>
+
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">
           Driving licence services
