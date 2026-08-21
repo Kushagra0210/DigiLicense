@@ -1,0 +1,44 @@
+# .coderabbit.yaml
+
+language: "en-US"
+
+reviews:
+  profile: "chill"
+
+  high_level_summary: true
+  review_status: true
+  review_details: false
+
+  # Keep the large walkthrough collapsed
+  collapse_walkthrough: true
+
+  # Useful
+  changed_files_summary: true
+
+  # Remove unnecessary clutter
+  sequence_diagrams: false
+  estimate_code_review_effort: false
+  suggested_labels: false
+  suggested_reviewers: false
+  related_issues: false
+  related_prs: false
+
+  # Absolutely remove the goofy stuff
+  in_progress_fortune: false
+  poem: false
+
+  request_changes_workflow: false
+
+  auto_review:
+    enabled: true
+    drafts: false
+
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
+
+chat:
+  art: false
+  auto_reply: true
