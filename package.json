@@ -8,13 +8,23 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "lint": "turbo lint",
-    "typecheck": "turbo typecheck",
+    "lint": "eslint tests/ --no-error-on-unmatched-pattern && turbo lint",
+    "typecheck": "pnpm db:generate && tsc --project tsconfig.tests.json --noEmit && turbo typecheck",
+    "test": "pnpm db:generate && vitest run",
+    "db:validate": "pnpm --filter @digilicense/db prisma validate",
     "db:migrate": "pnpm --filter @digilicense/db prisma migrate dev",
+    "db:migrate:deploy": "pnpm --filter @digilicense/db prisma migrate deploy",
     "db:studio": "pnpm --filter @digilicense/db prisma studio",
     "db:generate": "pnpm --filter @digilicense/db prisma generate"
   },
   "devDependencies": {
-    "turbo": "^2.10.11"
+    "@digilicense/config": "workspace:*",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.5",
+    "turbo": "^2.10.11",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.0.18",
+    "zod": "^4.4.3"
   }
 }

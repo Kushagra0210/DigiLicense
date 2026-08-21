@@ -1,0 +1,12 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  importFileExtension = ""
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Phase 0 deliberately defines no speculative product tables. Models and
+// migrations are added with the first use case that owns them.

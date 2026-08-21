@@ -1,5 +1,5 @@
 {
-  "name": "@digilicense/validation",
+  "name": "@digilicense/backend-core",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,9 +12,6 @@
     "build": "tsc",
     "lint": "eslint src/ --no-error-on-unmatched-pattern",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "zod": "^4.4.3"
   },
   "devDependencies": {
     "eslint": "^9.39.5",

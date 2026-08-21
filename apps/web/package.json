@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --no-error-on-unmatched-pattern",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@digilicense/backend-core": "workspace:*",
+    "@digilicense/db": "workspace:*",
     "@digilicense/ui": "workspace:*",
     "@digilicense/validation": "workspace:*",
     "@hookform/resolvers": "^5.9.1",
@@ -23,7 +25,9 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.85.0",
-    "tailwind-merge": "^3.6.0"
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
