@@ -11,9 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.120.0",
     "@digilicense/validation": "workspace:*",
-    "openai": "^7.5.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
