@@ -9,7 +9,7 @@ DigiLicense is a Delhi-only, independent driving-licence service prototype. The 
 - [ ] Implement applicant login with a seeded synthetic mobile number and simulated OTP
 - [ ] Implement a separate operator login using synthetic username/password credentials
 - [ ] Add server-side sessions, role authorization, rate limits, and security headers
-- [ ] Configure PostgreSQL on Neon, Drizzle schema, migrations, and synthetic seed data
+- [ ] Configure Neon-hosted PostgreSQL with Prisma 7.9.1, define the Prisma schema, generate and apply migrations, and create synthetic seed data
 - [ ] Define shared application, workflow, document, payment, appointment, notification, and audit models
 
 ## Ten core capabilities
