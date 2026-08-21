@@ -32,36 +32,42 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Button
+            type="button"
             variant="ghost"
             size="icon-sm"
             className="md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
             <Menu className="size-4" />
           </Button>
         </div>
       </div>
 
-      {mobileOpen && (
-        <div className="border-t border-border bg-white px-4 pb-4 pt-2 md:hidden">
-          <nav className="flex flex-col gap-1">
-            <Link
-              href="/services"
-              className="rounded-md px-3 py-2 text-sm hover:bg-accent"
-              onClick={() => setMobileOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/status"
-              className="rounded-md px-3 py-2 text-sm hover:bg-accent"
-              onClick={() => setMobileOpen(false)}
-            >
-              Track application
-            </Link>
-          </nav>
-        </div>
-      )}
+      <div
+        id="mobile-navigation"
+        hidden={!mobileOpen}
+        className="border-t border-border bg-white px-4 pb-4 pt-2 md:hidden"
+      >
+        <nav className="flex flex-col gap-1">
+          <Link
+            href="/services"
+            className="rounded-md px-3 py-2 text-sm hover:bg-accent"
+            onClick={() => setMobileOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            href="/status"
+            className="rounded-md px-3 py-2 text-sm hover:bg-accent"
+            onClick={() => setMobileOpen(false)}
+          >
+            Track application
+          </Link>
+        </nav>
+      </div>
     </header>
   )
 }
